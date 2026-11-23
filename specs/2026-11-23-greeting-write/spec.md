@@ -3,13 +3,22 @@ id: 2026-11-23-greeting-write
 title: Write a greeting to a file
 short: greeting write
 unit: 2026-11-23-greeting-unit
-status: planned
+status: verified
 domain_gate: done
 plan_reviewed:
   sha256: 4cebad54be52883a5afc430e062b57a3afcbc0e2e18c1914185e409622579c90
   status: clean
   rounds: 1
   at: 2026-11-23T17:38:44Z
+hardened:
+  at: 2026-11-23T17:52:53Z
+  by: implement-9.7
+  status: clean
+  depth: standard
+  base_sha: 37aaafce0db8c87f778d9748b5d23e94b2692c2b
+  diff_sha256: 68bcfbdacf08064836ae7d99654c04a799ef92b82142376e0575288af782d705
+  files: 4
+  lines: 83
 created: 2026-11-23
 worktreePath: C:/Projects/Private/drive-scratch/.claude/worktrees/2026-11-23-greeting-write
 branch: feat/2026-11-23-greeting-write
