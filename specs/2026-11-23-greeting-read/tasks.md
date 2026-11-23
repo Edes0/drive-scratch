@@ -11,5 +11,5 @@
 
 | AC | Planned test | Actual test |
 |---|---|---|
-| AC1 | tests/test_read_greeting.py::test_returns_the_greeting_without_its_newline | |
-| AC2 | tests/test_read_greeting.py::test_returns_none_when_no_file | |
+| AC1 | tests/test_read_greeting.py::test_returns_the_greeting_without_its_newline | tests/test_read_greeting.py::test_returns_the_greeting_without_its_newline |
+| AC2 | tests/test_read_greeting.py::test_returns_none_when_no_file | tests/test_read_greeting.py::test_returns_none_when_no_file |

@@ -5,3 +5,12 @@ def write_greeting(path, name):
 	"""Replace the file at `path` with `Hello, <name>!` and a newline, UTF-8."""
 	with open(path, 'w', encoding='utf-8', newline='\n') as f:
 		f.write(f'Hello, {name}!\n')
+
+
+def read_greeting(path):
+	"""Return the greeting in the file at `path` without its trailing newline, UTF-8; `None` if no file exists."""
+	try:
+		with open(path, encoding='utf-8') as f:
+			return f.read().removesuffix('\n')
+	except FileNotFoundError:
+		return None
