@@ -5,7 +5,7 @@ and owns only argument parsing, output and exit codes (unit D3).
 
 ## Files
 
-- `wordcount/__main__.py` — new: a `main(argv=None)` returning the exit code, and `sys.exit(main())` under `if __name__ == '__main__':`.
+- `wordcount/__main__.py` — new: a `main()` returning the exit code, and `sys.exit(main())` under `if __name__ == '__main__':`.
 - `tests/test_cli.py` — new; one test per AC plus the unit's fit criterion, each running
   `[sys.executable, '-m', 'wordcount', ...]` with `cwd` = the repo root (`tests/..`), `capture_output=True`,
   `text=True`, fixtures in a `tempfile.TemporaryDirectory`.
@@ -40,8 +40,8 @@ Windows machine and on CI's ubuntu runner (`.github/workflows/test.yml`).
 - **`argparse` with `prog='wordcount'`.** Rejected: reading `sys.argv` by hand. Why: argparse already prints a usage
   line to stderr and exits 2 on a missing argument (AC2) and on extra arguments, with no code of ours; `prog` keeps
   the usage line from naming `__main__.py`.
-- **`main(argv=None)` returns the exit code; `sys.exit(main())` runs under a `__name__` guard.** Rejected: logic at module level.
-  Why: keeps the entry callable without a subprocess; the tests still run it as a subprocess, as the spec requires.
+- **`main()` returns the exit code; `sys.exit(main())` runs under a `__name__` guard.** Rejected: logic at module level,
+  and an `argv` parameter (dropped at simplify: every test runs the module as a subprocess, so nothing passed it).
 - **Catch `FileNotFoundError` first, then `OSError` and `UnicodeDecodeError`.** Rejected: one `except Exception`.
   Why: AC3 and AC4 need different messages, and `FileNotFoundError` is an `OSError`; a directory raises
   `IsADirectoryError` on Linux but `PermissionError` on Windows, both `OSError`; bad bytes raise
