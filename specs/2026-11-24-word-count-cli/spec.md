@@ -3,9 +3,17 @@ id: 2026-11-24-word-count-cli
 title: Print the word count of a file named on the command line
 short: word count cli
 unit: 2026-11-23-word-count
-status: grilled
+status: planned
 domain_gate: done
+plan_reviewed:
+  sha256: 106f626e4b38630ffce552291b359104f81bfff43d8432e9286328d6425b9906
+  status: clean
+  rounds: 1
+  at: 2026-11-24T15:13:28Z
 created: 2026-11-24
+worktreePath: C:/Projects/Private/drive-scratch/.claude/worktrees/2026-11-24-word-count-cli
+branch: feat/2026-11-24-word-count-cli
+branchCreated: true
 ---
 
 `python -m wordcount <path>` prints the word count of the file at `path`, as S1's `count_words(path)` returns it,
