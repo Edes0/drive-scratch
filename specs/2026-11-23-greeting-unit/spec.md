@@ -3,9 +3,18 @@ id: 2026-11-23-greeting-unit
 title: A greeting saved to a file and read back
 short: greeting unit
 kind: unit
-status: grilled
+status: verified
 domain_gate: done
 created: 2026-11-23
+hardened:
+  at: 2026-11-24T09:26:35Z
+  by: implement-9.7
+  status: clean
+  depth: standard
+  base_sha: 2e66a76698d10fb3733c51452068b34c9734f3bf
+  diff_sha256: 516f2418cdc6755f188ca8883e70b78578808a899a934d69097fad6301433679
+  files: 11
+  lines: 318
 ---
 
 The Drive hand check's fixture (claude-home spec `2026-11-22-card-orchestrator`, AC9): a unit of two small child
