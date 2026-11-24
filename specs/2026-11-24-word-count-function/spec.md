@@ -3,9 +3,17 @@ id: 2026-11-24-word-count-function
 title: Count the words in a text file
 short: word count function
 unit: 2026-11-23-word-count
-status: grilled
+status: planned
 domain_gate: done
+plan_reviewed:
+  sha256: 2b5a3e049623daa4b3986bc0ec3f83b492376efbfb510926b1d7670dd7795abc
+  status: clean
+  rounds: 2
+  at: 2026-11-24T12:27:39Z
 created: 2026-11-24
+worktreePath: C:/Projects/Private/drive-scratch/.claude/worktrees/2026-11-24-word-count-function
+branch: feat/2026-11-24-word-count-function
+branchCreated: true
 ---
 
 `wordcount.count_words(path)` returns the number of words in the UTF-8 text file at `path`, read with encoding
