@@ -3,9 +3,18 @@ id: 2026-11-23-word-count
 title: Count the words in a text file
 short: word count
 kind: unit
-status: grilled
+status: verified
 domain_gate: done
 created: 2026-11-23
+hardened:
+  at: 2026-11-25T10:01:17Z
+  by: implement-9.7
+  status: clean
+  depth: full
+  base_sha: 0cbf0e0b058390e38c52253d82481f4e5e7de6c3
+  diff_sha256: 577ecf8c5e5ce0773bb57106b29a3badb6d9eaeaf375cc3b073ebae145ba4e5a
+  files: 12
+  lines: 398
 ---
 
 The fresh fixture for the Drive hand check (claude-home spec `2026-11-22-card-orchestrator`, AC9): one Drive press
